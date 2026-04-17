@@ -412,11 +412,28 @@
         transform: translateY(0);
     }
 
-    .card-grid a {
-    display: block;
+.info-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card-link {
+    display: flex;              /* KEY FIX */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
-.info-card:hover {
+/* Remove extra spacing issues */
+.card-link img {
+    margin-bottom: 15px;
+}
+.info-card:hover,
+.skill-card:hover {
     transform: translateY(-5px);
     transition: 0.3s;
     cursor: pointer;
@@ -506,18 +523,18 @@
     <div class="card-grid">
         
         <div class="info-card">
-            <img src="arduino.png" alt="Automated Car Parking System Icon" style="width: 48px; height: 48px; margin-bottom: 15px;" />
+            <img src="arduino.png" alt="Automated Car Parking System Icon" />
             <h4>Automated Car Parking System</h4>
             <p>Arduino-based project with IR sensors and LCD to detect and display real-time car parking availability.</p>
         </div>
 
         <div class="info-card">
-    <a href="https://github.com/Saksham-Ughade/Arduino-Based-Writing-Machine" target="_blank" class="card-link">
-        <img src="arduino.png" alt="Arduino Writing Machine" />
-        <h4>Arduino-Based Writing Machine</h4>
-        <p>Arduino-based CNC-style writing machine that converts digital input into handwritten text using precise motor control.</p>
-    </a>
-</div>
+            <a href="https://github.com/Saksham-Ughade/Arduino-Based-Writing-Machine" target="_blank" class="card-link">
+                <img src="arduino.png" alt="Arduino Writing Machine" />
+                <h4>Arduino-Based Writing Machine</h4>
+                <p>Arduino-based CNC-style writing machine that converts digital input into handwritten text using precise motor control.</p>
+            </a>
+        </div>
 
     </div>
 </section>
